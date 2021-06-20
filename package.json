@@ -1,0 +1,34 @@
+{
+  "name": "shorturl",
+  "version": "1.0.0",
+  "description": "Node + React",
+  "main": "App.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node App.js",
+    "server": "nodemon App.js",
+    "frontend": "npm run start --prefix frontend",
+    "frontend:install": "npm install --prefix frontend",
+    "frontend:build": "npm run build --prefix frontend",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server \" \"npm run frontend \""
+  },
+  "keywords": [
+    "node",
+    "react"
+  ],
+  "author": "Valerii Petrov <vuholding@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
